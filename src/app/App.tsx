@@ -1,8 +1,7 @@
 import React from "react";
 import "../css/app.css";
-import { Box, Button, Container, Stack, Typography } from "@mui/material";
-import { RippleBadge } from "./MaterialTheme/styled";
-import { Link, Route, Router, Switch, useLocation } from "react-router-dom";
+
+import { Route, Switch, useLocation } from "react-router-dom";
 import HomePage from "./screens/homePage";
 import MemberPage from "./screens/userPage";
 import OrdersPage from "./screens/ordersPage";
@@ -11,9 +10,9 @@ import HomeNavbar from "./components/headers/HomeNavbar";
 import OtherNavbar from "./components/headers/OtherNavbar";
 import Footer from "./components/footer";
 import "../css/navbar.css";
+import "../css/footer.css";
+import "../css/app.css";
 import HelpPage from "./screens/helpPage";
-
-
 
 export default function App() {
   const location = useLocation();
@@ -32,7 +31,7 @@ export default function App() {
           <MemberPage />
         </Route>
         <Route path="/help">
-          <HelpPage/>
+          <HelpPage />
         </Route>
         <Route path="/">
           <HomePage />

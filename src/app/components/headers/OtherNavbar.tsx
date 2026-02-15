@@ -1,9 +1,10 @@
 import React from 'react'
 import { Box, Button, Container, Stack } from "@mui/material";
 import { NavLink } from "react-router-dom";
+import Basket from './Basket';
 
 function OtherNavbar() {
-  const authUser = true;
+  const authUser = null;
   return (
     <div className="other-navbar">
       <Container
@@ -52,6 +53,7 @@ function OtherNavbar() {
             </Box>
 
             {/** BASKET */}
+             <Basket />
             {!authUser ? (
               <Button
                 className="login-button"
