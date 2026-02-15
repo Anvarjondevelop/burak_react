@@ -10,6 +10,10 @@ import ProductsPage from "./screens/productsPage";
 import HomeNavbar from "./components/headers/HomeNavbar";
 import OtherNavbar from "./components/headers/OtherNavbar";
 import Footer from "./components/footer";
+import "../css/navbar.css";
+import HelpPage from "./screens/helpPage";
+
+
 
 export default function App() {
   const location = useLocation();
@@ -27,11 +31,14 @@ export default function App() {
         <Route path="/member-page">
           <MemberPage />
         </Route>
+        <Route path="/help">
+          <HelpPage/>
+        </Route>
         <Route path="/">
           <HomePage />
         </Route>
       </Switch>
-      <Footer/>
+      <Footer />
     </>
   );
 }
