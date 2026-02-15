@@ -2,31 +2,25 @@ import { Box, Button, Container, Stack } from "@mui/material";
 import { NavLink } from "react-router-dom";
 
 function HomeNavbar() {
-  const authUser = null;
+  const authUser = true;
 
   return (
     <div className="home-navbar">
-      <Container sx={{ mt: "55px", height: "642px" }}>
-        <Stack
-          sx={{ height: "50px" }}
-          flexDirection={"row"}
-          justifyContent={"space-between"}
-        >
+      <Container
+        sx={{ mt: "55px", height: "642px" }}
+        className="navbar-container"
+      >
+        <Stack className="menu">
           <Box>
             <NavLink to={"/"}>
               <img
-                style={{ width: "125px", height: "30px" }}
+                className="brand-logo"
                 src="/icons/burak.svg"
-                alt=""
+                alt="burakLogo"
               />
             </NavLink>
           </Box>
-          <Stack
-            flexDirection={"row"}
-            justifyContent={"space-between"}
-            minWidth={"700px"}
-            alignItems={"center"}
-          >
+          <Stack className="nav-links">
             <Box className={"hover-line"}>
               <NavLink activeClassName="underline" to="/">
                 Home
@@ -67,7 +61,11 @@ function HomeNavbar() {
                 Login
               </Button>
             ) : (
-              <img />
+              <img
+                className="user"
+                src="/icons/default-user.svg"
+                aria-haspopup={"true"}
+              />
             )}
           </Stack>
         </Stack>

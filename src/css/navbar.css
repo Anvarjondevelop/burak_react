@@ -20,6 +20,33 @@
   line-height: normal;
   letter-spacing: -0.24px;
 }
+.home-navbar .navbar-container {
+  height: 643.52px;
+  margin-top: 55px;
+}
+.home-navbar .navbar-container .menu {
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.home-navbar .navbar-container .menu .brand-logo {
+  width: 125px;
+  height: 30px;
+}
+.home-navbar .navbar-container .menu .nav-links {
+  min-width: 700px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+}
+.home-navbar .navbar-container .menu .user {
+  width: 50px;
+  height: 50px;
+  border-radius: 24px;
+}
 .home-navbar .underline {
   display: flex;
   content: "";
@@ -32,6 +59,7 @@
   transform: scaleX(0);
   transition: transform 250ms ease-in-out;
 }
+
 .home-navbar .hover-line:hover:after {
   transform: scaleX(1);
 }
@@ -40,13 +68,13 @@
 }
 
 .home-navbar .login-button {
-width: 78.83px;
-height: 37px;
-color: #FFF;
-text-align: center;
-font-family: Poppins;
-font-size: 16px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
+  width: 78.83px;
+  height: 37px;
+  color: #fff;
+  text-align: center;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }
