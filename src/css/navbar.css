@@ -11,10 +11,10 @@
 }
 
 .home-navbar .hover-line a {
+  height: 19.528px;
   color: #f8f8ff;
-  z-index: 100;
   font-family: "Roboto Slab";
-  font-size: 16px;
+  font-size: 18px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -63,7 +63,7 @@
 .home-navbar .hover-line:hover:after {
   transform: scaleX(1);
 }
-.home-navbar .div.hover-line:after {
+.home-navbar .div .hover-line:after {
   transform-origin: 0% 50%;
 }
 
@@ -78,3 +78,81 @@
   font-weight: 400;
   line-height: normal;
 }
+
+.home-navbar .navbar-container .header-frame {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 142px;
+  height: 462xp;
+}
+
+.home-navbar .navbar-container .header-frame .detail {
+  display: flex;
+  flex-direction: column;
+  width: 510px;
+}
+
+.home-navbar .navbar-container .header-frame .detail .head-main-text {
+  width: 450px;
+  height: 150px;
+  color: #f8f8ff;
+  font-family: "Roboto Serif";
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: -0.75px;
+}
+.home-navbar .navbar-container .header-frame .detail .wel-text {
+  width: 501px;
+  height: 42px;
+  color: #d7b686;
+  font-family: "Roboto Serif";
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.54px;
+}
+.home-navbar .navbar-container .header-frame .detail .service {
+  margin-top: 22px;
+  width: 153px;
+  height: 23px;
+  color: #d5d5d5;
+  font-family: "Roboto Serif";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.3px;
+}
+.home-navbar .navbar-container .header-frame .detail .sign-up {
+  width: 210px;
+  height: 60px;
+  border-radius: 4px;
+  background: #1976d2;
+  color: #f8f8ff;
+  text-align: center;
+  font-family: Poppins;
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.home-navbar .navbar-container .logo-frame {
+  margin-top: 44px;
+width: 689.47px;
+height: 418.902px;
+}
+.home-navbar .navbar-container .logo-frame .logo-image {
+    width: 689.47px;
+height: 418.902px;
+
+background: url("/public/img/logo.webp");
+background-size: contain;
+background-repeat: no-repeat;
+filter: invert(25%);
+}
+
+

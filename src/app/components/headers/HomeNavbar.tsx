@@ -42,7 +42,7 @@ function HomeNavbar() {
 
             {authUser ? (
               <Box className={"hover-line"}>
-                <NavLink to="/member-page">My page</NavLink>{" "}
+                <NavLink to="/member-page">My page</NavLink>
               </Box>
             ) : null}
             <Box className={"hover-line"}>
@@ -69,7 +69,25 @@ function HomeNavbar() {
             )}
           </Stack>
         </Stack>
-        <Stack>DETAIL</Stack>
+        <Stack className="header-frame">
+          <Stack className="detail">
+            <Box className="head-main-text">
+              World's Most Delicious Cousine{" "}
+            </Box>
+            <Box className="wel-text">The Choice, not just a choice</Box>
+            <Box className="service">24 hours service</Box>
+            <Box style={{ marginTop: "73px" }}>
+              {authUser ? (
+                <Button variant="contained" className="sign-up">
+                  SIGN UP
+                </Button>
+              ) : null}
+            </Box>
+          </Stack>
+          <Box className="logo-frame">
+            <div className="logo-image"> </div>
+          </Box>
+        </Stack>
       </Container>
     </div>
   );
