@@ -1,3 +1,4 @@
+import React from "react";
 import {
   AspectRatio,
   Card,
@@ -7,7 +8,7 @@ import {
 } from "@mui/joy";
 import { Box, Container, Stack } from "@mui/material";
 import VisibilityIcon from "@mui/icons-material/Visibility";
-import React from "react";
+
 import Divider from "../../components/divider";
 
 const newDishes = [
