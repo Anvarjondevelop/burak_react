@@ -142,19 +142,18 @@
 }
 .home-navbar .navbar-container .logo-frame {
   margin-top: 44px;
-width: 689.47px;
-height: 418.902px;
+  width: 689.47px;
+  height: 418.902px;
 }
 .home-navbar .navbar-container .logo-frame .logo-image {
-    width: 689.47px;
-height: 418.902px;
+  width: 689.47px;
+  height: 418.902px;
 
-background: url("/public/img/logo.webp");
-background-size: contain;
-background-repeat: no-repeat;
-filter: invert(25%);
+  background: url("/public/img/logo.webp");
+  background-size: contain;
+  background-repeat: no-repeat;
+  filter: invert(25%);
 }
-
 
 /* otherNavbar */
 
@@ -227,7 +226,7 @@ filter: invert(25%);
   transform-origin: 0% 50%;
 }
 
-.other-navbar  .login-button {
+.other-navbar .login-button {
   width: 78.83px;
   height: 37px;
   color: #fff;
@@ -238,8 +237,6 @@ filter: invert(25%);
   font-weight: 400;
   line-height: normal;
 }
-
-
 
 /* BASKET */
 
