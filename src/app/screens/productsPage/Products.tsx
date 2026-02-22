@@ -12,14 +12,14 @@ import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import { Typography } from "@mui/joy";
 function Products() {
   const products = [
-    { productName: "Cutlet", imagePath: "/img/cutlet.webp" },
-    { productName: "Cutlet", imagePath: "/img/cutlet.webp" },
-    { productName: "Cutlet", imagePath: "/img/cutlet.webp" },
-    { productName: "Cutlet", imagePath: "/img/cutlet.webp" },
-    { productName: "Cutlet", imagePath: "/img/cutlet.webp" },
-    { productName: "Cutlet", imagePath: "/img/cutlet.webp" },
-    { productName: "Cutlet", imagePath: "/img/cutlet.webp" },
-    { productName: "Cutlet", imagePath: "/img/cutlet.webp" },
+    { productName: "Lavash", imagePath: "/img/cutlet.webp" },
+    { productName: "Lavash", imagePath: "/img/lavash.webp" },
+    { productName: "Lavash", imagePath: "/img/lavash.webp" },
+    { productName: "Lavash", imagePath: "/img/lavash.webp" },
+    { productName: "Lavash", imagePath: "/img/lavash.webp" },
+    { productName: "Lavash", imagePath: "/img/lavash.webp" },
+    { productName: "Lavash", imagePath: "/img/lavash.webp" },
+    { productName: "Lavash", imagePath: "/img/lavash.webp" },
   ];
 
   return (
@@ -118,7 +118,7 @@ function Products() {
                       </span>
                       <div className="product-price">
                         <MonetizationOnIcon />
-                        {12}
+                        {14}
                       </div>
                     </Box>
                   </Stack>
