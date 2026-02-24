@@ -172,7 +172,7 @@ function Products() {
             <Box>
               <iframe
                 className="map-image"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3257.551947325044!2d129.07617637625796!3d35.2674009525951!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1520f94a60ce20f5%3A0xebe3b2ebac044325!2z67aA7IKw7Jm46rWt7Ja064yA7ZWZ6rWQ!5e0!3m2!1sko!2skr!4v1771736032229!5m2!1sko!2skr"
+                src="https://www.google.com/maps?q=Hosan+University+South+Korea&output=embed"
               ></iframe>
             </Box>
           </Stack>
