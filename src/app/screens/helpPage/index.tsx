@@ -12,7 +12,7 @@ import TabPanel from "@mui/lab/TabPanel";
 import "../../../css/help.css";
 import { faq } from "../../../lib/data/faq";
 import { terms } from "../../../lib/data/terms";
-
+//HOOK
 export default function HelpPage() {
   const [value, setValue] = React.useState("1");
 
