@@ -1,9 +1,16 @@
 import { Box, Button, Container, Stack } from "@mui/material";
 import { NavLink } from "react-router-dom";
 import Basket from "./Basket";
+import React, { useState } from "react";
 
 function HomeNavbar() {
   const authUser = null;
+
+  const [count, setCount] = useState(0);
+
+  const buttonHandler = () => {
+    setCount(count + 1);
+  };
 
   return (
     <div className="home-navbar">
@@ -66,6 +73,7 @@ function HomeNavbar() {
                 className="user"
                 src="/icons/default-user.svg"
                 aria-haspopup={"true"}
+                alt=""
               />
             )}
           </Stack>
@@ -76,10 +84,14 @@ function HomeNavbar() {
               World's Most Delicious Cousine{" "}
             </Box>
             <Box className="wel-text">The Choice, not just a choice</Box>
-            <Box className="service">24 hours service</Box>
+            <Box className="service">{count} hours service</Box>
             <Box style={{ marginTop: "73px" }}>
               {authUser ? (
-                <Button variant="contained" className="sign-up">
+                <Button
+                  variant={"contained"}
+                  className={"sign-up"}
+                  onClick={buttonHandler}
+                >
                   SIGN UP
                 </Button>
               ) : null}
