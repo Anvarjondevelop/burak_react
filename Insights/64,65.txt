@@ -11,3 +11,30 @@ ________________________________________________________________________________
 ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
 /////////////
 Hook = “ilgak” → komponentni React tizimiga ulaydigan maxsus funksiya.
+
+//// 
+
+Reactda 2 xil component bor Class component va functional component
+
+hooklar functional component ichida suniy state yasab beradi
+
+Reactning 3 xil lifecycle methodi bor : 
+ComponentDidmount |  - birinchi render bo'lganda ishga tushadu | fronted loyihamiz birinchi qurilish uchun kerak bo'ladigan datani backend serverdan retrive qilib olamiz
+ComponentdidUpdate | 
+component will unmount | - component DOM dan olib tashlanishidan oldin ishlaydigan lifecycle method.
+
+Mounting (Yaratilish bosqichi)
+Component birinchi marta DOM ga qo‘shilganda ishlaydi.
+
+Updating (Yangilanish bosqichi)
+Component state yoki props o‘zgarganda qayta render bo‘ladi.
+
+Unmounting (O‘chirilish bosqichi)
+Component DOM dan olib tashlanganda ishlaydi.
+
+/////
+React da useState va useEffect — bu Hooks. Hooks React function component ichida state va lifecycle ishlatish imkonini beradi.
+useState → state (data) saqlash uchun
+useEffect → renderdan keyin ish bajarish uchun
+
+
