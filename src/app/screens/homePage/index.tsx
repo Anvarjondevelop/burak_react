@@ -41,7 +41,7 @@ function HomePage() {
     //1//Backend server data request => Data
     //2//Slice: Data => Store
   }, []);
-  console.log("popularDishes: ", popularDishes);
+  // console.log("popularDishes: ", popularDishes);
   return (
     <div className="homepage">
       <Statistics />
