@@ -16,10 +16,11 @@ Hook = “ilgak” → komponentni React tizimiga ulaydigan maxsus funksiya.
 
 Reactda 2 xil component bor Class component va functional component
 
+
 hooklar functional component ichida suniy state yasab beradi
 
 Reactning 3 xil lifecycle methodi bor : 
-ComponentDidmount |  - birinchi render bo'lganda ishga tushadu | fronted loyihamiz birinchi qurilish uchun kerak bo'ladigan datani backend serverdan retrive qilib olamiz
+ComponentDidmount |  - birinchi render bo'lganda ishga tushadi | fronted loyihamiz birinchi qurilish uchun kerak bo'ladigan datani backend serverdan retrive qilib olamiz
 ComponentdidUpdate | 
 component will unmount | - component DOM dan olib tashlanishidan oldin ishlaydigan lifecycle method.
 
@@ -38,3 +39,29 @@ useState → state (data) saqlash uchun
 useEffect → renderdan keyin ish bajarish uchun
 
 
+redux oqim 2 xil : 1-dispatch 2-subscription
+
+//////////////////////////
+Redux - Butun app uchun bitta umumiy data saqlanadigan joy.
+
+Store → barcha state saqlanadigan joy
+Action → nima bo‘lganini bildiradi
+Reducer → state qanday o‘zgarishini belgilaydi
+
+
+dispatch — action yuborish uchun ishlatiladi.
+subscribe — store dagi o‘zgarishni kuzatadi.
+
+Redux Toolkit — bu Reduxni oson ishlatish uchun yaratilgan rasmiy toollar to‘plami.
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+____________________________________________________________________________________
+|     80 => HomePage - Redux Slice va Selectorlarni tashkil etamiz                 |
+¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+HomePage Screen Componenntiga daxldor Redux Architechturini hosil etamiz
+
+Darsimiz rejasi:
+1.HomePage Screen Componenntiga daxldor type integrationlarni amalga oshiramiz
+2.HomePage Screen Componenntimizning Redux storegeni configuratsiyasini amalga oshiramiz
+3.Redux logger middlewareni integratsiyasini amalga oshiramiz
+4.HomePage daxldor Redux Architechturini birga test qilamiz

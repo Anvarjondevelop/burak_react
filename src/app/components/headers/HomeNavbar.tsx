@@ -4,7 +4,7 @@ import Basket from "./Basket";
 import React, { useEffect, useState } from "react";
 
 function HomeNavbar() {
-  const authUser = null;
+  const authUser = true;
 
   const [count, setCount] = useState<number>(0);
   const [value, setvalue] = useState<boolean>(true);
@@ -17,6 +17,7 @@ function HomeNavbar() {
     };
   }, [value]); // valueni qiymati o'zgarganda useeffect yan bir marotaba ishga tushadi
   //nimaning qiymati o'zgarganda use effect qayta ishga tushsin
+
   /** HANDLERS **/
   const buttonHandler = () => {
     setvalue(!value);
