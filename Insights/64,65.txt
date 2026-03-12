@@ -65,3 +65,8 @@ Darsimiz rejasi:
 2.HomePage Screen Componenntimizning Redux storegeni configuratsiyasini amalga oshiramiz
 3.Redux logger middlewareni integratsiyasini amalga oshiramiz
 4.HomePage daxldor Redux Architechturini birga test qilamiz
+
+/////////
+
+Slice => Frontendagi ma'lum bir componentimiz backenddan ma'lumot olgandan keyin redux store ga reducerlar orqali yoziladi
+Selector => yozilgan ma'lumotni bizni componentimiz ichida chaqish, ishlatish
