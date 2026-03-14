@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { HomePageState } from "../../../lib/types/screen";
-
+//boshlang'ich ma'lumot
 const initialState: HomePageState = {
   popularDishes: [],
   newDishes: [],

@@ -67,6 +67,19 @@ Darsimiz rejasi:
 4.HomePage daxldor Redux Architechturini birga test qilamiz
 
 /////////
-
+//slice redux storega borib ma'lumotlarni yozish
 Slice => Frontendagi ma'lum bir componentimiz backenddan ma'lumot olgandan keyin redux store ga reducerlar orqali yoziladi
-Selector => yozilgan ma'lumotni bizni componentimiz ichida chaqish, ishlatish
+
+Selector => yozilgan ma'lumotni bizni componentimiz ichiga chaqirish, ishlatish
+
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+____________________________________________________________________________________
+|     81 => HomePage - Backend olingan ma'lumotlar orqali develop yakunlaymiz       |
+¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+ * Darsimiz rejasi:
+# Frontendimizga daxldor environmental variablelarni va consiguration faylni hosil etamiz
+# Backenddan ma'lumot olish maqsadida API Servicelarni joriy etamiz
+# API Servicelar orqali olingan ma'lumotlar asosida HomePageScreen Componentimizni developing jarayonini yakunlaymiz
+
