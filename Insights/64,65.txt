@@ -82,4 +82,9 @@ ________________________________________________________________________________
 # Frontendimizga daxldor environmental variablelarni va consiguration faylni hosil etamiz
 # Backenddan ma'lumot olish maqsadida API Servicelarni joriy etamiz
 # API Servicelar orqali olingan ma'lumotlar asosida HomePageScreen Componentimizni developing jarayonini yakunlaymiz
-
+/////////
+Axios — bu JavaScript kutubxonasi bo‘lib, u serverga HTTP request yuborish uchun ishlatiladi. 
+Ya'ni frontend → backend bilan gaplashishi uchun kerak bo‘ladi.
+/////
+CORS (Cross-Origin Resource Sharing) — bu browser xavfsizlik mexanizmi bo‘lib, 
+bir domen boshqa domen serveriga request yuborishi mumkinmi yoki yo‘qmi shuni nazorat qiladi.

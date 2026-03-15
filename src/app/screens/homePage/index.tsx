@@ -9,38 +9,41 @@ import NewDishes from "./NewDishes";
 import ActiveUser from "./ActiveUsers";
 import Events from "./Events";
 
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { Dispatch } from "@reduxjs/toolkit";
-import { createSelector } from "reselect";
-import { setNewDishes, setPopularDishes, setTopUsers } from "./slice";
-import { retrievePopularDishes } from "./selector";
+import { setPopularDishes } from "./slice";
 import { Product } from "../../../lib/types/product";
-import { Member } from "../../../lib/types/member";
+import ProductService from "../../services/ProductService";
+import { ProductCollection } from "../../../lib/enums/product.enum";
 
 /** REDUX SLICE & SELECTOR **/
 //Redux da state ni o‘zgartirish uchun dispatch qilish kerak
 // databasedan ma'lumot olib storega joylayapdi
 const actionDispatch = (dispatch: Dispatch) => ({
   setPopularDishes: (data: Product[]) => dispatch(setPopularDishes(data)), // => setPopularDishes commandasini setPopularDishes reduceri orqali hosil qilib oldik
-  // setNewDishes: (data: Product[]) => dispatch(setNewDishes(data)),
-  // setTopUsers: (data: Member[]) => dispatch(setTopUsers(data)),
 });
 //Bu Redux state dan ma'lumot olish uchun optimizatsiya qilingan selector
-const PopularDishesRetriever = createSelector(
-  retrievePopularDishes,
-  (popularDishes) => ({ popularDishes })
-);
 
 function HomePage() {
-  //3
-  //Selector: Store => Data
+  //3//Selector: Store => Data
   const { setPopularDishes } = actionDispatch(useDispatch());
-  // function component ichida setPopularDishes ni caqirib qo'lga olyapmiz
-  const { popularDishes } = useSelector(PopularDishesRetriever);
+  // console.log(process.env.REACT_APP_API_URL);
 
-  console.log(process.env.REACT_APP_API_URL);
   useEffect(() => {
     //1//Backend server data request => Data
+    const product = new ProductService();
+    product
+      .getProducts({
+        page: 1,
+        limit: 4,
+        order: "productViews",
+        productCollection: ProductCollection.DISH,
+      })
+      .then((data) => {
+        setPopularDishes(data);
+      })
+      .catch((err) => console.log(err));
+
     //2//Slice: Data => Store
   }, []);
   // console.log("popularDishes: ", popularDishes);
