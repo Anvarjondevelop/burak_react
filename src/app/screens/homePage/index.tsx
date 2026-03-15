@@ -7,11 +7,13 @@ import ActiveUser from "./ActiveUsers";
 import Events from "./Events";
 import { useDispatch } from "react-redux";
 import { Dispatch } from "@reduxjs/toolkit";
-import { setNewDishes, setPopularDishes } from "./slice";
+import { setNewDishes, setPopularDishes, setTopUsers } from "./slice";
 import { Product } from "../../../lib/types/product";
 import ProductService from "../../services/ProductService";
 import { ProductCollection } from "../../../lib/enums/product.enum";
 import "../../../css/home.css";
+import { Member } from "../../../lib/types/member";
+import MemberService from "../../services/MemberService";
 
 /** REDUX SLICE & SELECTOR **/
 //Redux da state ni o‘zgartirish uchun dispatch qilish kerak
@@ -19,12 +21,15 @@ import "../../../css/home.css";
 const actionDispatch = (dispatch: Dispatch) => ({
   setPopularDishes: (data: Product[]) => dispatch(setPopularDishes(data)), // => setPopularDishes commandasini setPopularDishes reduceri orqali hosil qilib oldik
   setNewDishes: (data: Product[]) => dispatch(setNewDishes(data)),
+  setTopUsers: (data: Member[]) => dispatch(setTopUsers(data)),
 });
 //Bu Redux state dan ma'lumot olish uchun optimizatsiya qilingan selector
 
 function HomePage() {
   //3//Selector: Store => Data
-  const { setPopularDishes, setNewDishes } = actionDispatch(useDispatch());
+  const { setPopularDishes, setNewDishes, setTopUsers } = actionDispatch(
+    useDispatch()
+  );
   // console.log(process.env.REACT_APP_API_URL);
 
   useEffect(() => {
@@ -51,6 +56,14 @@ function HomePage() {
       })
       .then((data) => {
         setNewDishes(data);
+      })
+      .catch((err) => console.log(err));
+
+    const member = new MemberService();
+    member
+      .getTopUsers()
+      .then((data) => {
+        setTopUsers(data);
       })
       .catch((err) => console.log(err));
 
