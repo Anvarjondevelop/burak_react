@@ -88,3 +88,17 @@ Ya'ni frontend → backend bilan gaplashishi uchun kerak bo‘ladi.
 /////
 CORS (Cross-Origin Resource Sharing) — bu browser xavfsizlik mexanizmi bo‘lib, 
 bir domen boshqa domen serveriga request yuborishi mumkinmi yoki yo‘qmi shuni nazorat qiladi.
+
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+____________________________________________________________________________________
+|     82 => HomePage - Restarurant Page - Redux Slice va Selectorlarni tashkil etamiz|
+¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+*Darsimiz rejasi:
+ * ProductsPage Screen Componentlarini type integrationlarni amalga oshiramiz
+ * ProductsPage Screen Componenntini Slice va Selectorlarini develop qilamiz
+
+ //////////////////
+ Redux Toolkit (RTK) — Reduxni best practice bilan, kam kod yozib ishlatish uchun tayyor vositalar to‘plami.
+ 
+

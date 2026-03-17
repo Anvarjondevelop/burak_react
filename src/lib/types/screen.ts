@@ -7,7 +7,7 @@ import { Product } from "./product";
 // butun application da ishlatilayotgan ma'lumotlarni type integratsiyasi
 export interface AppRootState {
   homePage: HomePageState; //HomePage dagi barcha ma'lumotlarni type integratsiayasini HomePageState deb belgilab oldik
-  // productsPage: ProductsPageState;
+  productsPage: ProductsPageState;
 }
 
 /** HOMEPAGE **/
@@ -18,5 +18,10 @@ export interface HomePageState {
   topUsers: Member[];
 }
 /** PRODUCTS PAGE **/
+export interface ProductsPageState {
+  restaurant: Member | null;
+  chosenProduct: Product | null;
+  products: Product[];
+}
 
 /** ORDERS PAGE **/

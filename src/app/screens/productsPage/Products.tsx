@@ -8,8 +8,23 @@ import Pagination from "@mui/material/Pagination";
 import PaginationItem from "@mui/material/PaginationItem";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
-
 import { Typography } from "@mui/joy";
+
+import { useDispatch, useSelector } from "react-redux";
+import { Dispatch } from "@reduxjs/toolkit";
+import { setProducts } from "./slice";
+import { Product } from "../../../lib/types/product";
+import { createSelector } from "reselect";
+import { retrieveProducts } from "./selector";
+
+/** REDUX SLICE & SELECTOR **/
+const actionDispatch = (dispatch: Dispatch) => ({
+  setProducts: (data: Product[]) => dispatch(setProducts(data)), // => setPopularDishes commandasini setPopularDishes reduceri orqali hosil qilib oldik
+});
+const productRetriever = createSelector(retrieveProducts, (produts) => ({
+  produts,
+}));
+
 function Products() {
   const products = [
     { productName: "Lavash", imagePath: "/img/cutlet.webp" },
