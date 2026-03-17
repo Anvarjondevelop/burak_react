@@ -47,11 +47,11 @@ const restaurantRetriever = createSelector(
 
 export default function ChosenProduct() {
   const { productId } = useParams<{ productId: string }>();
-  const { setRestaurant, setChosenProduct } = actionDispatch(useDispatch);
+  const { setRestaurant, setChosenProduct } = actionDispatch(useDispatch());
   const { chosenProduct } = useSelector(chosenProductRetriever);
   const { restaurant } = useSelector(restaurantRetriever);
 
-  console.log("productID", productId);
+  console.log("productId", productId);
   useEffect(() => {
     const product = new ProductService();
     product
