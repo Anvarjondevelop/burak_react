@@ -10,6 +10,7 @@ import { useHistory } from "react-router-dom";
 import { CartItem } from "../../../lib/types/search";
 import { serverApi } from "../../../lib/config";
 import DeleteForeverIcon from "@mui/icons-material/DeleteForever";
+import { UseGlobals } from "../../hooks/useGlobals";
 
 interface BasketProps {
   cartItems: CartItem[];
@@ -22,7 +23,7 @@ interface BasketProps {
 export default function Basket(props: BasketProps) {
   const { cartItems, onAdd, onRemove, onDelete, onDeleteAll } = props;
 
-  const authMember = null;
+  const { authMember } = UseGlobals();
   const history = useHistory();
   const itemsPrice: number = cartItems.reduce(
     (a: number, c: CartItem) => a + c.quantity * c.price,

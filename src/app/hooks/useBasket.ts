@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { CartItem } from "../../lib/types/search";
-import { OndemandVideoOutlined } from "@mui/icons-material";
 
 const useBasket = () => {
   const cartJson: string | null = localStorage.getItem("cartData");
@@ -22,7 +21,7 @@ const useBasket = () => {
       localStorage.setItem("cartData", JSON.stringify(cartUpdate));
     } else {
       const cartUpdate = [...cartItems, { ...input }];
-      setCartItems(cartItems);
+      setCartItems(cartUpdate);
       localStorage.setItem("cartData", JSON.stringify(cartUpdate));
     }
   };

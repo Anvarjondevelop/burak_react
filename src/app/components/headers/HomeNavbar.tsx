@@ -179,7 +179,7 @@ function HomeNavbar(props: HomeNavbarProps) {
             <Box className="wel-text">The Choice, not just a choice</Box>
             <Box className="service">24 hours service</Box>
             <Box style={{ marginTop: "73px" }}>
-              {authMember ? (
+              {!authMember ? (
                 <Button
                   variant={"contained"}
                   className={"sign-up"}
