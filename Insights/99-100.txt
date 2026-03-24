@@ -1,0 +1,104 @@
+____________________________________________________________________________________
+|   99- Basket - Savatimizni business mantiqini develop qilamiz                    |
+¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+* Darsimiz rejasi :
+ * Basketimizga yangi productlar qo'shish mantiqini develop qilamiz
+ * Basketimizning mantiqini hooklar orqali amalga oshiramiz
+ * Basketimiz bilan bog'liq boshqa mantiqlarimizni develop qilamiz 
+
+ ///////////////////
+*******************
+React’da muammo ?
+Oddiy JavaScript’da o‘zgaruvchi yaratamiz:
+let count = 0;
+Button bosilganda:
+count = count + 1;
+Ammo React’da bu ishlamaydi.
+
+Nima uchun?
+Chunki React o‘zgaruvchilar o‘zgarganini bilmaydi, shuning uchun UI yangilanmaydi.
+Shu muammoni hal qilish uchun React state tushunchasini ishlatadi.
+
+State nima? tarjimasi - holat, vaziyat
+State — bu component ichidagi o‘zgaradigan ma'lumot
+Misollar:
+savatdagi mahsulotlar
+like soni
+input qiymati
+user login holati
+
+Masalan:
+count = 0
+count = 1
+UI ham 1 bo‘lib yangilanadi.
+
+useState nima?
+useState — bu React hook bo‘lib, component ichida state yaratish uchun ishlatiladi.
+
+Syntax:
+const [state, setState] = useState(initialValue);
+3 ta qism bor :
+state ->	hozirgi qiymat
+setState ->	qiymatni o‘zgartirish
+initialValue ->	boshlang‘ich qiymat
+
+Eng oddiy misol:
+
+import { useState } from "react";
+
+function Counter() {
+  const [count, setCount] = useState(0);
+
+  return (
+    <div>
+      <h1>{count}</h1>
+
+      <button onClick={() => setCount(count + 1)}>
+        +1
+      </button>
+    </div>
+  );
+}
+
+React nima qiladi:
+1️⃣ state o‘zgardi
+2️⃣ component qayta render bo‘ladi
+3️⃣ UI yangilanadi
+
+/////////////////////////////////////
+ Nega cartni localStorage ga saqlaymiz?
+Agar saqlamasak:
+1️⃣ user product qo‘shadi
+2️⃣ page refresh qiladi
+3️⃣ cart yo‘qoladi
+
+localStorage ishlatilsa:
+product qo'shildi
+      ↓
+localStorage ga saqlandi
+      ↓
+page refresh
+      ↓
+cart saqlanib qoladi
+Shuning uchun barcha e-commerce saytlar cartni localStorage ga saqlaydi.
+
+//////////////////////////
+  const currentCart = cartJson ? JSON.parse(cartJson) : [];
+JSON.parse() — JavaScript funksiyasi bo‘lib, JSON formatdagi stringni object yoki array ga aylantiradi.
+
+JSON degani: JavaScript Object Notation
+Bu data saqlash va uzatish formatidir.
+
+Nega JSON.parse kerak?
+localStorage faqat string saqlaydi.
+JSON.parse()
+= stringni normal JavaScript object/array ga aylantiradi
+
+/////////////////////
+e.stopPropagation()
+= eventning parent elementlarga tarqalishini to‘xtatadi
+
+
+
+
+
