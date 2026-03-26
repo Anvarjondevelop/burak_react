@@ -10,9 +10,9 @@ import { useHistory } from "react-router-dom";
 import { CartItem } from "../../../lib/types/search";
 import { Messages, serverApi } from "../../../lib/config";
 import DeleteForeverIcon from "@mui/icons-material/DeleteForever";
-import { UseGlobals } from "../../hooks/useGlobals";
 import { sweetErrorHandling } from "../../../lib/sweetAlert";
 import OrderService from "../../services/OrderService";
+import { UseGlobals } from "../../hooks/useGlobals";
 
 interface BasketProps {
   cartItems: CartItem[];
@@ -25,7 +25,7 @@ interface BasketProps {
 export default function Basket(props: BasketProps) {
   const { cartItems, onAdd, onRemove, onDelete, onDeleteAll } = props;
 
-  const { authMember } = UseGlobals();
+  const { authMember, setOrderBuilder } = UseGlobals();
   const history = useHistory();
   const itemsPrice: number = cartItems.reduce(
     (a: number, c: CartItem) => a + c.quantity * c.price,
@@ -53,7 +53,9 @@ export default function Basket(props: BasketProps) {
       await order.createOrder(cartItems);
 
       onDeleteAll();
-      //REFRESH VIA CONTEXT
+
+      setOrderBuilder(new Date());
+
       history.push("/orders");
     } catch (err) {
       console.log(err);
@@ -72,7 +74,7 @@ export default function Basket(props: BasketProps) {
         onClick={handleClick}
       >
         <Badge badgeContent={cartItems.length} color="secondary">
-          <img src={"/icons/shopping-cart.svg"} />
+          <img src={"/icons/shopping-cart.svg"} alt="" />
         </Badge>
       </IconButton>
       <Menu

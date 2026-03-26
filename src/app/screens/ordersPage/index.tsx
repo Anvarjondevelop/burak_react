@@ -10,13 +10,14 @@ import FinishedOrders from "./FinishedOrders";
 import { useDispatch } from "react-redux";
 import { Dispatch } from "@reduxjs/toolkit";
 import { setPausedOrders, setProcessOrders, setFinishedOrders } from "./slice";
-import "../../../css/order.css";
 import { Order, OrderInquiry } from "../../../lib/types/order";
 import { OrderStatus } from "../../../lib/enums/order.enum";
 import OrderService from "../../services/OrderService";
+import { UseGlobals } from "../../hooks/useGlobals";
+import "../../../css/order.css";
 
 const actionDispatch = (dispatch: Dispatch) => ({
-  setPausedOrders: (data: Order[]) => dispatch(setPausedOrders(data)), // => setPopularDishes commandasini setPopularDishes reduceri orqali hosil qilib oldik
+  setPausedOrders: (data: Order[]) => dispatch(setPausedOrders(data)),
   setProcessOrders: (data: Order[]) => dispatch(setProcessOrders(data)),
   setFinishedOrders: (data: Order[]) => dispatch(setFinishedOrders(data)),
 });
@@ -24,6 +25,7 @@ const actionDispatch = (dispatch: Dispatch) => ({
 function OrdersPage() {
   const { setPausedOrders, setProcessOrders, setFinishedOrders } =
     actionDispatch(useDispatch());
+  const { orderBuilder } = UseGlobals();
   const [value, setValue] = useState("1");
   const [orderInquiry, setOrderInquiry] = useState<OrderInquiry>({
     page: 1,
@@ -48,7 +50,7 @@ function OrdersPage() {
       .getMyOrders({ ...orderInquiry, orderStatus: OrderStatus.FINISH })
       .then((data) => setFinishedOrders(data))
       .catch((err) => console.log(err));
-  }, [orderInquiry]);
+  }, [orderInquiry, orderBuilder]);
 
   /** HANDLERS **/
 
@@ -76,8 +78,8 @@ function OrdersPage() {
               </Box>
             </Box>
             <Stack className="order-main-content">
-              <PausedOrders />
-              <ProcessOrders />
+              <PausedOrders setValue={setValue} />
+              <ProcessOrders setValue={setValue} />
               <FinishedOrders />
             </Stack>
           </TabContext>
