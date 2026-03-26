@@ -1,2 +1,9 @@
 102 - OrdersPage Screen Componenti Redux Architecture develop qilamiz
 -----------------------------------------------------------------------------
+
+103 - OrdersPage - Complete page development
+-----------------------------------------------------------------------------
+* Darsimiz rejasi:
+ * Basketimiz orqali yangi orderlarni hosil etamiz
+ * Userlarimizga daxldor bo'lgan jami orderlarni backeddan chaqiramiz
+ * Orderlarimizni update qilish mantiqini develop qilamiz
