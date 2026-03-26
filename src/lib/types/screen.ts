@@ -1,6 +1,7 @@
 //REACTDA DAXLDOR TYPE INTEGRATION
 
 import { Member } from "./member";
+import { Order } from "./order";
 import { Product } from "./product";
 
 /** REACT APP STATE **/
@@ -8,6 +9,7 @@ import { Product } from "./product";
 export interface AppRootState {
   homePage: HomePageState; //HomePage dagi barcha ma'lumotlarni type integratsiayasini HomePageState deb belgilab oldik
   productsPage: ProductsPageState;
+  ordersPage: OrdersPageState;
 }
 
 /** HOMEPAGE **/
@@ -25,3 +27,9 @@ export interface ProductsPageState {
 }
 
 /** ORDERS PAGE **/
+
+export interface OrdersPageState {
+  pausedOrders: Order[];
+  processOrders: Order[];
+  finishedOrders: Order[];
+}
